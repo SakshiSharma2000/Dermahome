@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+  <html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Derma Home</title>
+     
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    
+body {
+  
+  font-family: "Montserrat", sans-serif;
+  
+}
+.background{
+  background: linear-gradient(90deg, #16a085, rgb(182, 155, 47));
+}
+h3{
+    color: rgb(196, 243, 167);
+    
+}
+h2{
+    color: rgb(196, 243, 167);
+}
+p{
+    color: rgb(221, 225, 219);
+    }
+.menu ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+}
+.menu ol:first-child {
+ 
+  margin: 1rem auto 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+}
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid #16a085;
+  position: relative;
+  transition: background 0.3s ease-in-out;
+}
+.menu-item:nth-child(1) > a::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  color: #16a085;
+}
+@media (min-width: 768px) {
+  .menu-item:nth-child(1) > a::before {
+    font-size: 1.5rem;
+  }
+}
+.menu-item:nth-child(2) > a::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  color: #16a085;
+}
+@media (min-width: 768px) {
+  .menu-item:nth-child(2) > a::before {
+    font-size: 1.5rem;
+  }
+}
+.menu-item:nth-child(3) > a::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  color: #16a085;
+}
+@media (min-width: 768px) {
+  .menu-item:nth-child(3) > a::before {
+    font-size: 1.5rem;
+  }
+}
+.menu-item:nth-child(4) > a::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  color: #16a085;
+}
+@media (min-width: 768px) {
+  .menu-item:nth-child(4) > a::before {
+    font-size: 1.5rem;
+  }
+}
+.menu-item:nth-child(5) > a::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  color: #16a085;
+}
+@media (min-width: 768px) {
+  .menu-item:nth-child(5) > a::before {
+    font-size: 1.5rem;
+  }
+}
+.menu-item .sub-menu > a {
+  color: red;
+}
+.menu-item:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+.menu-item .sub-menu {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  transform-origin: top;
+  transform: rotateX(-90deg);
+  transition: transform 0.3s linear;
+  background-color: #f4d03f;
+}
+.menu-item .sub-menu .menu-item {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.menu-item .sub-menu .menu-item a::before {
+  content: "";
+}
+.menu-item .sub-menu .menu-item:first-child {
+  border: 0;
+}
+.menu-item:hover, .menu-item.active {
+  border-top: 2px solid #f4d03f;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.menu-item:hover a::before, .menu-item.active a::before {
+  color: white;
+}
+.menu-item:hover .sub-menu {
+  transform: rotateX(0deg);
+}
+.menu-item a {
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  height: 100%;
+  width: 100%;
+  padding: 1.5em 1em;
+}
+@media (min-width: 768px) {
+  .menu-item a {
+    font-size: 1rem;
+  }
+}
+
+body {
+  background-color: #F5F3F3;
+}
+/* nav bar end */
+/* products start */
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 40px;
+  
+}
+
+.pantone-card {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 300px;
+}
+.pantone-card--french-gray { 
+   background-color: #CECDCF;
+}
+.pantone-card--vanilla-ice {
+  background-color: #F5DADF;
+}
+.pantone-card--mischka {
+  background-color: #E2E0E3;
+}
+.pantone-card--givry {
+  background-color: #F9DBC6;
+}
+.pantone-card--bon-jour {
+  background-color: #EDEBED;
+}
+.pantone-card--jagged-ice {
+  background-color: #C3E5E9;
+}
+.pantone-card--shadow-green {
+  background-color: #99C4C8;
+}
+.pantone-card--conch {
+  background-color: #C0D5CF;
+}
+.pantone-card--gray-nurse {
+  background-color: #E2E8DE;
+}
+.pantone-card--pampas {
+  background-color: #F2ECE8;
+}
+.pantone-card__footer {
+  background-color: #fff;
+  padding: 10px;
+} 
+.pantone-card__name {
+  color: #000;
+  font-size: 14px;
+  margin: 0;
+  
+}
+.pantone-card__name span {
+  display: block;
+  
+}
+.pantone-card__name{
+  color:black;
+  text-decoration:none;
+  display: inline; /* Display as inline element */
+  cursor: pointer;
+
+}
+.pantone-card__name:hover{
+  text-decoration: underline;
+}
+
+.grid {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(5, auto);
+  grid-gap: 40px;
+}
+
+.grid__item:hover {
+  transform: scale(1.1); /* Increase the scale on hover */
+}
+
+
+.grid__item:hover .pantone-card__footer {
+  opacity: 1; /* Show the footer on hover */
+}
+
+
+
+
+  </style>
+  </head>
+
+<body>
+
+  <header class="background">
+    
+  <h1 style="color: rgb(196, 243, 167);">Welcome to Derma Home</h1>
+  <nav class="menu">
+    <ol>
+        <li class="menu-item"><a href="#0">Home</a></li>
+        
+        <li class="menu-item">
+          <a href="#0">Skin Type</a>
+          <ol class="sub-menu">
+            <li class="menu-item"><a href="#0">Normal Skin </a></li>
+            <li class="menu-item"><a href="#0">Dry Skin</a></li>
+            <li class="menu-item"><a href="#0">Oily Skin</a></li>
+           
+            <li class="menu-item"><a href="#0">Combination Skin</a></li>
+          </ol>
+        </li>
+        <li class="menu-item"><a href="#0">Skin Care At Home</a></li>
+        <li class="menu-item"><a href="#0">Hair Care At Home</a></li>
+        <li class="menu-item">
+          <a href="#0">Products</a>
+          <ol class="sub-menu">
+            <li class="menu-item"><a href="#0">Men</a></li>
+            <li class="menu-item"><a href="#0">Women</a></li>
+            <li class="menu-item"><a href="#0">Both</a></li>
+          </ol>
+        </li>
+        <li class="menu-item"><a href="#0"><form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="height:23.5px;>
+          <button class="btn btn-outline-success" type="submit" style="height:23.5px;"><span style="height:23.5px;">Search</span></button>
+        </form></a></li>
+        
+      </ol>
+  </nav>
+</header>
+  <h1 style=color:forestgreen>Products for Women</h1>
+<div class="container">
+  <!-- Grid container	 -->
+    
+    <div class="grid">
+      <div class="grid__item">
+        <article class="pantone-card pantone-card--vanilla-ice">
+          <img src="women1.webp" height="250" width="250">
+          <div class="pantone-card__footer">
+            <a href="https://www.amazon.in/Vitamin-Moisturizer-Ascorbic-Ascorbyl-Phosphate/dp/B09FTKLD5G/ref=sr_1_23_sspa?crid=3J3Z211A0VFJ6&keywords=product%2Bmoisturizer%2Bdry%2Bskin&qid=1701589450&sprefix=product%2Bmoisturizer%2Bdry%2Bskin%2Caps%2C356&sr=8-23-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1"><h1 class="pantone-card__name">Dot & Key Vitamin C + E Sorbet Super Bright Moisturizer for Face 
+            </h1></a>
+          </div>
+        </article>
+      </div>
+      <div class="grid__item">
+        <article class="pantone-card pantone-card--mischka">
+          <img src="women3.jpg" height="250" width="250">
+          <div class="pantone-card__footer">
+           <a href="https://www.amazon.in/Lakme-Blush-Glow-Lemon-Facewash/dp/B079SPTSP4/ref=sr_1_1_sspa?crid=1F10RYZAOANEZ&keywords=combination+skin+face+wash&qid=1701589694&sprefix=combi%2Caps%2C266&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"> <h1 class="pantone-card__name">Lakmã© Blush & Glow Facewash, Lemon Fresh,
+            </h1></a>
+          </div>
+        </article>
+      </div>
+      <div class="grid__item">
+        <article class="pantone-card pantone-card--givry">
+          <img src="women2.jpg" height="250" width="250">
+          <div class="pantone-card__footer">
+            <a href="https://www.amazon.in/Lakme-Sun-Expert-Tinted-Sunscreen/dp/B085WJVX7C/ref=sr_1_11?crid=2DN4ADSMWI5SP&keywords=sunscreen%2Bspf%2B50&qid=1701589777&sprefix=sunc%2Caps%2C274&sr=8-11&th=1"><h1 class="pantone-card__name">Mamaearth Vitamin C Skincare Facial Kit
+            </h1></a>
+          </div>
+        </article>
+      </div>
+      <div class="grid__item">
+        <article class="pantone-card pantone-card--bon-jour">
+          <img src="women4.webp" height="250" width="250">
+          <div class="pantone-card__footer">
+            <a href="https://www.amazon.in/Plum-Green-Mattifying-Moisturizer-50ml/dp/B00OCJ5PUU/ref=sr_1_9?crid=16PC1277SNL6N&keywords=moisturizer%2Bfor%2Boily%2Bskin&qid=1701589892&sprefix=moisturizer%2Bfor%2Boily%2Bskin%2Caps%2C291&sr=8-9&th=1"><h1 class="pantone-card__name">Plum Green Tea Mattifying Moisturizer
+            </h1></a>
+          </div>
+        </article>
+      </div>
+      <div class="grid__item">
+        <article class="pantone-card pantone-card--jagged-ice">
+          <img src="women5.webp" height="250" width="250">
+
+          <div class="pantone-card__footer">
+           <a href="https://www.amazon.in/mCaffeine-Non-sticky-Moisturizer-Moisturization-Nourishing/dp/B095P5PK6B/ref=sr_1_24_sspa?crid=16PC1277SNL6N&keywords=moisturizer%2Bfor%2Boily%2Bskin&qid=1701589892&sprefix=moisturizer%2Bfor%2Boily%2Bskin%2Caps%2C291&sr=8-24-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1"><h1 class="pantone-card__name">mCaffeine Dry Skin Moisturizer for Face with Shea Butter & Caffeine
+            </h1></a>
+        </article>
+      </div>
+      <div class="grid__item">
+        <article class="pantone-card pantone-card--shadow-green">
+          <img src="women6.webp" height="250" width="250">
+
+          <div class="pantone-card__footer">
+            <a href="https://www.amazon.in/Vitamin-Sunscreen-Water-Light-Protection-Absorption/dp/B0BLK4YRSN/ref=sr_1_4_sspa?crid=5RMJ1JBYNRVG&keywords=sunscreen+spf+50&qid=1701590417&sprefix=sunscreen+spf+50%2Caps%2C263&sr=8-4-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"><h1 class="pantone-card__name">Dot & Key Vitamin C + E Super Bright Sunscreen SPF 50
+            </h1></a>
+          </div>
+        </article>
+      </div>
+      <div class="grid__item">
+        <article class="pantone-card pantone-card--conch">
+          <img src="women.jpg" height="250" width="250
+          ">
+          <div class="pantone-card__footer">
+           <a href="https://www.amazon.in/mCaffeine-Espresso-Exfoliation-Tightening-Natural/dp/B093HCTJBD/ref=sr_1_2_sspa?crid=303Q2HVSO8K8&keywords=face+pack+for+glowing+skin&qid=1701597304&sprefix=facepack%2Caps%2C274&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"><h1 class="pantone-card__name">mCaffeine Exfoliating Coffee Face Pack for Glowing Skin
+            </h1></a>
+          </div>
+        </article>
+      </div>
+      <div class="grid__item">
+        <article class="pantone-card pantone-card--grey-nurse">
+          <img src="women8.jpg" height="250" width="250
+          ">
+          <div class="pantone-card__footer">
+            <a href="https://www.amazon.in/Dot-Key-Glow-Reviving-Vitamin/dp/B07XQGPRYL/ref=sr_1_22_sspa?crid=38LZ4H1X9UM8S&keywords=face+pack+for+dry+skin+women&qid=1701595808&sprefix=face+pa+for+dry+skin%2Caps%2C301&sr=8-22-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&psc=1"><h1 class="pantone-card__name">Dot & Key Glow Reviving Vitamin C Pink Clay Mask
+            </h1></a>
+          </div>
+        </article>
+      </div>
+      <div class="grid__item">
+        <article class="pantone-card pantone-card--pampas">
+          <img src="women9.jpg" height="250" width="250
+          ">
+          <div class="pantone-card__footer">
+           <a href="https://www.amazon.in/Good-Vibes-Rose-Glow-Toner/dp/B084GQV2J1/ref=sr_1_20?crid=FHLEGD2OZ18F&keywords=toner%2Bfor%2Bglowing%2Bskin&qid=1701595997&sprefix=toner%2Caps%2C283&sr=8-20&th=1">
+              <h1 class="pantone-card__name">Good Vibes Rose Glow Toner
+            </h1></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+  
+    
+    
+  
+  
